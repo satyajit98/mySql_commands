@@ -1,0 +1,20 @@
+// for insert database through terminal in local
+mysql -u root -p // Enter then type password
+
+// for see user
+SELECT user FROM mysql.user;
+
+// for see database
+ SHOW DATABASES;
+
+ // for use database
+ USE (your database name);
+
+ // for see tables
+ SHOW TABLES;
+
+// for create user
+CREATE USER "user_name"@"localhost" IDENTIFIED BY "user_password";
+
+// for delete user
+DROP USER "user_name"@"localhost";
