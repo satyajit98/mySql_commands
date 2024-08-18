@@ -46,3 +46,12 @@ GRANT OPTION - this would allow them to grant or remove other users privileges
 
 // for change user password
 SET PASSWORD FOR user_name@localhost = "new_password";
+
+// for import table_file in database
+mysql -u root -p your_database_name < your_file_name.sql
+
+// for export dump database from storage
+mysqldump -u root -p your_database_name > new_file_name.sql
+
+// for export dump table from database in storage
+mysqldump -u root -p your_database_name your_table_name > new_file_name.sql
