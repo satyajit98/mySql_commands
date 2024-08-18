@@ -18,3 +18,28 @@ CREATE USER "user_name"@"localhost" IDENTIFIED BY "user_password";
 
 // for delete user
 DROP USER "user_name"@"localhost";
+
+// for check user permission
+SHOW GRANTS FOR "user_name"@"localhost";
+
+// for give all permission on all database
+GRANT ALL PRIVILEGES ON * . * TO "user_name"@"localhost";
+
+// for revoke all permission on all database
+REVOKE ALL PRIVILEGES ON * . * FROM 'satya'@'localhost';
+
+//for give all permission on specific database
+GRANT ALL PRIVILEGES ON "database_name". * TO "user_name"@"localhost"; // if there is (-) then use (``)backticks
+
+//for revoke all permission on specific database
+GRANT ALL PRIVILEGES ON "database_name". * FROM "user_name"@"localhost"; // if there is (-) then use (``)backticks
+
+// for all types of permission list
+ALL PRIVILEGES - this would allow to access all database and all tables
+CREATE - this would allow to create new tables or database
+DROP - allow them to delete tables or database
+DELETE - allow to delete rows from tables
+INSERT - allow to insert rows into tables
+SELECT - allow them to use the select command to read through database
+UPDATE - this would allow update table rows
+GRANT OPTION - this would allow them to grant or remove other users privileges
