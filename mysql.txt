@@ -43,3 +43,6 @@ INSERT - allow to insert rows into tables
 SELECT - allow them to use the select command to read through database
 UPDATE - this would allow update table rows
 GRANT OPTION - this would allow them to grant or remove other users privileges
+
+// for change user password
+SET PASSWORD FOR user_name@localhost = "new_password";
